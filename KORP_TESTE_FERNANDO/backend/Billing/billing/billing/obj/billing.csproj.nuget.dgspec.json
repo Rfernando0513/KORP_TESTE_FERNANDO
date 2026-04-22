@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rfern\\Documents\\KORP_TESTE_FERNANDO\\backend\\Billing\\billing\\billing\\billing.csproj": {}
+    "C:\\Users\\rfern\\source\\repos\\KORP_TESTE_FERNANDO\\KORP_TESTE_FERNANDO\\backend\\Billing\\billing\\billing\\billing.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rfern\\Documents\\KORP_TESTE_FERNANDO\\backend\\Billing\\billing\\billing\\billing.csproj": {
+    "C:\\Users\\rfern\\source\\repos\\KORP_TESTE_FERNANDO\\KORP_TESTE_FERNANDO\\backend\\Billing\\billing\\billing\\billing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rfern\\Documents\\KORP_TESTE_FERNANDO\\backend\\Billing\\billing\\billing\\billing.csproj",
+        "projectUniqueName": "C:\\Users\\rfern\\source\\repos\\KORP_TESTE_FERNANDO\\KORP_TESTE_FERNANDO\\backend\\Billing\\billing\\billing\\billing.csproj",
         "projectName": "billing",
-        "projectPath": "C:\\Users\\rfern\\Documents\\KORP_TESTE_FERNANDO\\backend\\Billing\\billing\\billing\\billing.csproj",
+        "projectPath": "C:\\Users\\rfern\\source\\repos\\KORP_TESTE_FERNANDO\\KORP_TESTE_FERNANDO\\backend\\Billing\\billing\\billing\\billing.csproj",
         "packagesPath": "C:\\Users\\rfern\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rfern\\Documents\\KORP_TESTE_FERNANDO\\backend\\Billing\\billing\\billing\\obj\\",
+        "outputPath": "C:\\Users\\rfern\\source\\repos\\KORP_TESTE_FERNANDO\\KORP_TESTE_FERNANDO\\backend\\Billing\\billing\\billing\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

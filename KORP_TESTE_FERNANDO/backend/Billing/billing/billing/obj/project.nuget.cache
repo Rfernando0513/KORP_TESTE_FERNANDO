@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v5od3B6vrdc=",
+  "dgSpecHash": "iw7SXpZrNlk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rfern\\Documents\\KORP_TESTE_FERNANDO\\backend\\Billing\\billing\\billing\\billing.csproj",
+  "projectFilePath": "C:\\Users\\rfern\\source\\repos\\KORP_TESTE_FERNANDO\\KORP_TESTE_FERNANDO\\backend\\Billing\\billing\\billing\\billing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rfern\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.6\\microsoft.aspnetcore.openapi.10.0.6.nupkg.sha512",
     "C:\\Users\\rfern\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
