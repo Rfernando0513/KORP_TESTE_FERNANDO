@@ -1,4 +1,0 @@
-<Solution>
-  <Project Path="backend/Billing/billing/billing/billing.csproj" />
-  <Project Path="backend/Stock/stock/stock/stock.csproj" />
-</Solution>
