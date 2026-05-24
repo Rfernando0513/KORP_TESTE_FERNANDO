@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using stock.Application.Dtos;
+using stock.Application.Dtos.Stock;
 using stock.core.model;
 using stock.Infra.Data;
 
@@ -93,5 +94,35 @@ namespace stock.Core.Services
 
             return _mapper.Map<ProductDto>(product);
         }
+
+        public async Task<bool> DecreaseStock(StockDecreaseDto dto)
+        {
+            foreach (var item in dto.Items)
+            {
+                var product = await _context.Product
+                    .FirstOrDefaultAsync(p => p.Id == item.ProductId);
+
+                if (product == null)
+                    throw new Exception($"Produto {item.ProductId} não encontrado.");
+
+                if (item.Quantity <= 0)
+                    throw new Exception("A quantidade deve ser maior que zero.");
+
+                if (product.Stock < item.Quantity)
+                    throw new Exception($"Saldo insuficiente para o produto {product.Description}.");
+            }
+
+            foreach (var item in dto.Items)
+            {
+                var product = await _context.Product
+                    .FirstOrDefaultAsync(p => p.Id == item.ProductId);
+
+                product!.Stock -= item.Quantity;
+            }
+
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
     }
 }

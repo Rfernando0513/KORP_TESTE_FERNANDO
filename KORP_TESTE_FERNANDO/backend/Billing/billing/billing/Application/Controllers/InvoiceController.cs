@@ -36,7 +36,7 @@ namespace billing.Application.Controller
             return Ok(invoices);
         }
 
-        [HttpGet("(GetById/{id:guid}")]
+        [HttpGet("GetById/{id:guid}")]
         public async Task<IActionResult> GetById(Guid id)
         {
             var invoice = await _service.GetById(id);
@@ -45,6 +45,20 @@ namespace billing.Application.Controller
                 return NotFound(new { message = "Nota fiscal não encontrada." });
 
             return Ok(invoice);
+        }
+
+        [HttpPost("{id:guid}/print")]
+        public async Task<IActionResult> Print(Guid id)
+        {
+            try
+            {
+                await _service.Print(id);
+                return Ok(new { message = "Nota fiscal impressa com sucesso." });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
     }
 }

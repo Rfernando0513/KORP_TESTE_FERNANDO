@@ -1,9 +1,9 @@
 [
   {
     "ContainingType": "billing.Application.Controller.InvoiceController",
-    "Method": "GetById",
-    "RelativePath": "api/Invoice/(GetById/{id}",
-    "HttpMethod": "GET",
+    "Method": "Print",
+    "RelativePath": "api/Invoice/{id}/print",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -39,6 +39,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "billing.Application.Controller.InvoiceController",
+    "Method": "GetById",
+    "RelativePath": "api/Invoice/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

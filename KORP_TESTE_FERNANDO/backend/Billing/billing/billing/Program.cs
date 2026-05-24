@@ -2,6 +2,7 @@ using billing.Application.Mapper;
 using billing.core.Services;
 using billing.Infra.Data;
 using Microsoft.EntityFrameworkCore;
+using billing.Application.Integrations.Stock;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddHttpClient<IStockServiceClient, StockServiceClient>(client =>
+{
+    client.BaseAddress = new Uri("https://localhost:7186");
+});
 
 builder.Services.AddDbContext<BillingDbContext>(options =>
 {

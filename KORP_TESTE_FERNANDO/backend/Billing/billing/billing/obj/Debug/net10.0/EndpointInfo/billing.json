@@ -57,8 +57,31 @@
         }
       }
     },
-    "/api/Invoice/(GetById/{id}": {
+    "/api/Invoice/GetById/{id}": {
       "get": {
+        "tags": [
+          "Invoice"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Invoice/{id}/print": {
+      "post": {
         "tags": [
           "Invoice"
         ],

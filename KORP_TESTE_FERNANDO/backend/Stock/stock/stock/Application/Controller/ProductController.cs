@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using stock.Application.Dtos;
+using stock.Application.Dtos.Stock;
 using stock.Core.Services;
 
 namespace stock.Application.Controller
@@ -64,6 +65,23 @@ namespace stock.Application.Controller
                 return BadRequest(new { message = ex.Message });
             }
 
+        }
+
+        [HttpPost("decrease-stock")]
+        public async Task<IActionResult> DecreaseStock([FromBody] StockDecreaseDto dto)
+        {
+            try
+            {
+                var result = await _service.DecreaseStock(dto);
+                if (!result)
+                    return BadRequest(new { message = "Não foi possível diminuir o estoque" });
+
+                return Ok(new { message = "Estoque diminuído com sucesso" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
     }
 }

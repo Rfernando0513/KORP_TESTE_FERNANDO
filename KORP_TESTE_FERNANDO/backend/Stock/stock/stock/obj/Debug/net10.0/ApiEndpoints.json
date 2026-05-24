@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "stock.Application.Controller.ProductController",
+    "Method": "DecreaseStock",
+    "RelativePath": "api/Product/decrease-stock",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "stock.Application.Dtos.Stock.StockDecreaseDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "stock.Application.Controller.ProductController",
     "Method": "GetAll",
     "RelativePath": "api/Product/GetAll",
     "HttpMethod": "GET",
